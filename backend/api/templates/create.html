@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <br />
+      <h5>
+
+        Hi {{profile.first_name}}, You Are Watching this Page to Create Your
+        Travel Experience.
+        <hr />
+      </h5>
+      <p>
+        <li>
+          Give A Nice Title including the name of the place You had Visited
+        </li>
+        <li>Make Sure to Give Accurate Information about all Fields</li>
+
+        <li>Please Try to Describe Your Experience broadly</li>
+        <li>After Clicking submit Button ,Your Post Will be Public</li>
+        <li>Fake Post Or Harmfull Content Can Make Your Profile Destroyed</li>
+        <li><a href="http://localhost:3000/">Back To Home</a></li>
+      </p>
+
+      <h2>Create a Post</h2>
+
+      <form
+        class="form-group"
+        action="{% url 'save-post' author %}"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <div>{{form.title}}</div>
+              </div>
+              <div class="col-sm-6">
+                <div>{{form.days_stayed}}</div>
+              </div>
+            </div>
+            <br />
+            <div class="mt-1">{{form.content}}</div>
+            <div class="mt-2">{{form.image}}</div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="mt-2">
+                  <label for="">Hotel Name (Optional):</label>
+                  {{form.hotel_name}}
+                </div>
+                <div class="mt-2">
+                  <label for="">Total Travellers:</label>
+
+                  {{form.total_travellers}}
+                </div>
+                <div class="mt-2">
+                  <label for="">Food Experience:</label>
+
+                  {{form.food_experience}}
+                </div>
+                <div class="mt-2">
+                  <label for="">Wortness:</label>
+
+                  {{form.worth}}
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="mt-2">
+                  <label for="">Total Cost:</label>
+                  {{form.total_costs}}
+                </div>
+                <div class="mt-2">
+                  <label for="">Rating:</label>
+
+                  {{form.rating}}
+                </div>
+                <div class="mt-2">
+                  <label for="">Locals Behavior:</label>
+
+                  {{form.locals_behavior}}
+                </div>
+                <div class="mt-2">
+                  <label for="">Riskness:</label>
+
+                  {{form.riskiness}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+      </form>
+    </div>
+    <br />
+  </body>
+</html>
