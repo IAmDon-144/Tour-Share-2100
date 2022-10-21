@@ -12,13 +12,13 @@ Travel is the most important thing of a human life. But most of the people canâ€
 This Website is Under Construction and Developed by Mubtasim Rahman Nabil Roll - 1903180 Due to The Course of CSE 2100 Under The Supervisor Tasmia Jannat
 
 Submitted To
-Tasmia Jannat
-Lecturer
+Tasmia Jannat,
+Lecturer,
 Rajshahi University of Engineering and Technology
 
 Submitted By
-Mubtasim Rahman Nabil
-Roll - 1903180
+Mubtasim Rahman Nabil,
+Roll - 1903180,
 Rajshahi University of Engineering and Technology
 
-For any Query mail me -  nablaa180@gmail.com 
+#For any Query mail me -  nablaa180@gmail.com 
